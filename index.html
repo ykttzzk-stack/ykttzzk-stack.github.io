@@ -16,7 +16,7 @@ html,body{margin:0;background:#000}
 .zk-hero{overflow:hidden;aspect-ratio:16/6;background:#000}
 .zk-track{display:flex;width:600%;height:100%;animation:zk-move 15s infinite ease-in-out}
 .zk-slide{position:relative;width:16.6667%;height:100%;display:block}
-.zk-slide img{width:100%;height:100%;object-fit:cover;display:block}
+.zk-slide img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block}
 .zk-slide span{position:absolute;left:5%;bottom:10%;font-size:clamp(20px,3.5vw,44px);font-weight:bold;color:#fff;text-shadow:0 0 10px #000}
 @keyframes zk-move{
 0%,16.7%{transform:translateX(0)}
@@ -28,13 +28,10 @@ html,body{margin:0;background:#000}
 }
 .zk-sec{max-width:1100px;margin:0 auto;padding:56px 4%}
 .zk-sec h2{font-size:28px;margin:0 0 24px;border-left:6px solid #e0457b;padding-left:12px}
-.zk-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.zk-card{position:relative;display:block;aspect-ratio:2/1;overflow:hidden;border-radius:8px;background:#111}
-.zk-card img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
-.zk-card:hover img{transform:scale(1.05)}
-.zk-card span{position:absolute;left:0;right:0;bottom:0;padding:10px 14px;background:linear-gradient(transparent,#000c);font-weight:bold}
+.zk-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.zk-gallery img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center 25%;border-radius:6px;display:block;background:#111}
 .zk-about{display:flex;gap:32px;align-items:center}
-.zk-about img{width:220px;max-width:40%;border-radius:8px}
+.zk-about img{width:220px;max-width:40%;aspect-ratio:1/1;object-fit:cover;border-radius:8px}
 .zk-plans{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .zk-plan{background:#111;border:1px solid #333;border-radius:8px;padding:24px}
 .zk-plan h3{margin:0 0 8px}
@@ -47,34 +44,35 @@ html,body{margin:0;background:#000}
 .zk-cols a{display:block;color:#aaa;font-size:14px;line-height:2}
 .zk-top{display:inline-block;margin-bottom:12px;color:#aaa}
 .zk-copy{color:#666;font-size:12px}
-@media(max-width:700px){.zk-grid,.zk-plans{grid-template-columns:1fr}.zk-about{flex-direction:column}.zk-about img{max-width:60%}}
+@media(max-width:700px){.zk-plans{grid-template-columns:1fr}.zk-gallery{grid-template-columns:repeat(2,1fr)}.zk-about{flex-direction:column}.zk-about img{max-width:60%}}
 </style>
 </head>
 <body>
 <div class="zk" id="zk-top">
 <header class="zk-head">
   <a class="zk-logo" href="#zk-top">やくたたずざき</a>
-  <nav class="zk-nav"><a href="#works">作品</a><a href="#about">自己紹介</a><a href="#plans">お仕事</a><a href="#sns">SNS</a><a href="お問い合わせフォームのURL">お問い合わせ</a></nav>
+  <nav class="zk-nav"><a href="#illust">イラスト</a><a href="#about">自己紹介</a><a href="#plans">お仕事</a><a href="#sns">SNS</a></nav>
   <a class="zk-cta" href="#plans">お仕事を依頼する</a>
 </header>
 
 <section class="zk-hero"><div class="zk-track">
-  <a class="zk-slide" href="#about"><img src="images/kanban.jpg" alt="やくたたずざき"><span>やくたたずざき</span></a>
-  <a class="zk-slide" href="#works"><img src="images/illust.jpg" alt="イラスト"><span>イラスト</span></a>
-  <a class="zk-slide" href="#works"><img src="images/manga.jpg" alt="漫画"><span>漫画</span></a>
-  <a class="zk-slide" href="#sns"><img src="images/movie.jpg" alt="動画"><span>動画</span></a>
-  <a class="zk-slide" href="#plans"><img src="images/work.jpg" alt="お仕事受付中"><span>お仕事受付中</span></a>
-  <a class="zk-slide" href="#about"><img src="images/kanban.jpg" alt="やくたたずざき"><span>やくたたずざき</span></a>
+  <a class="zk-slide" href="#about"><img src="a-udekumi.png" alt="やくたたずざき"><span>やくたたずざき</span></a>
+  <a class="zk-slide" href="#illust"><img src="desktop.png" alt="イラスト"><span>イラスト</span></a>
+  <a class="zk-slide" href="#illust"><img src="honoo.png" alt="漫画"><span>漫画</span></a>
+  <a class="zk-slide" href="#sns"><img src="a-supesiumu.png" alt="動画"><span>動画</span></a>
+  <a class="zk-slide" href="#plans"><img src="kakusikanai.png" alt="お仕事受付中"><span>お仕事受付中</span></a>
+  <a class="zk-slide" href="#about"><img src="a-udekumi.png" alt="やくたたずざき"><span>やくたたずざき</span></a>
 </div></section>
 
-<section class="zk-sec" id="works"><h2>作品</h2><div class="zk-grid">
-  <a class="zk-card" href="#works"><img src="images/nakamura.jpg" alt="陰キャ少女ナカムラ"><span>陰キャ少女ナカムラ</span></a>
-  <a class="zk-card" href="#sns"><img src="images/anime.jpg" alt="アニメ"><span>アニメ</span></a>
-  <a class="zk-card" href="#works"><img src="images/illust.jpg" alt="イラスト"><span>イラスト</span></a>
-  <a class="zk-card" href="#plans"><img src="images/site.jpg" alt="サイト制作"><span>サイト制作</span></a>
+<section class="zk-sec" id="illust"><h2>イラスト</h2><div class="zk-gallery">
+  <img src="a-udekumi.png" alt="イラスト">
+  <img src="desktop.png" alt="イラスト">
+  <img src="honoo.png" alt="イラスト">
+  <img src="a-supesiumu.png" alt="イラスト">
+  <img src="kakusikanai.png" alt="イラスト">
 </div></section>
 
-<section class="zk-sec zk-about" id="about"><img src="images/profile.jpg" alt="やくたたずざき"><div>
+<section class="zk-sec zk-about" id="about"><img src="a-udekumi.png" alt="やくたたずざき"><div>
   <h2>自己紹介</h2>
   <p>漫画・アニメ・イラスト、そしてWebサイト制作をするクリエイター「やくたたずざき」です。シュールなギャグ漫画を中心に、YouTubeやInstagramでも発信しています。</p>
 </div></section>
@@ -90,7 +88,7 @@ html,body{margin:0;background:#000}
 
 <footer class="zk-foot">
   <div class="zk-cols">
-    <div><h4>作品</h4><a href="#works">漫画</a><a href="#works">イラスト</a><a href="#sns">動画</a></div>
+    <div><h4>作品</h4><a href="#illust">イラスト</a><a href="#sns">動画</a></div>
     <div><h4>ご依頼</h4><a href="#plans">お仕事について</a><a href="お問い合わせフォームのURL">お問い合わせ</a></div>
     <div><h4>サイトについて</h4><a href="privacy.html">プライバシーポリシー</a><a href="tokushoho.html">特定商取引法に基づく表記</a></div>
   </div>
