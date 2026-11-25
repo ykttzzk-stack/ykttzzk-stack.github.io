@@ -114,7 +114,9 @@ html,body{margin:0;background:#000}
     track.style.transform='translateX('+x+'px)';
     requestAnimationFrame(tick);
   }
+  hero.addEventListener('dragstart',function(e){e.preventDefault();});
   hero.addEventListener('pointerdown',function(e){
+    e.preventDefault();
     dragging=true; moved=0; startX=e.clientX; startOff=x; hero.classList.add('drag');
   });
   window.addEventListener('pointermove',function(e){
